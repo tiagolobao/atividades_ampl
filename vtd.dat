@@ -6,8 +6,8 @@ data;
 set V := 1 2 3 4 5 6;
 
 /* CAPACIDADE */
-set C:
-             1     2     3     4     5   6:=
+param C[*,*]:
+             1     2     3     4     5     6 :=
         1    .     10    10    10    10    10
         2    10    .     10    10    10    10
         3    10    10    .     10    10    10
@@ -16,7 +16,7 @@ set C:
         6    10    10    10    10    10    .  ;
 
 /* ENLACES */
-set E:
+set ENLACES:
             1    2    3    4    5    6:=
         1    -    +    -    -    -    +
         2    +    -    +    -    -    -
@@ -26,9 +26,9 @@ set E:
         6    +    -    +    -    +    -;
 
 /* CUSTOS */
-set w_bw  := 1 ; #custo da rede
-set w_dpi := 1 ; #custo de licensa
-set w_cpu := 1 ; #cursto por vCPU
+param w_bw  := 1 ; #custo da rede
+param w_dpi := 1 ; #custo de licensa
+param w_cpu := 1 ; #cursto por vCPU
 
 /* CAMINHOS */
 set LIGHTPATHS:
